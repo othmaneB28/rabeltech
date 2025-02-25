@@ -167,6 +167,65 @@
             text-align: center;
             padding: 20px;
         }
+
+        /* ✅ Compatibilité mobile améliorée sans modifier le contenu/disposition */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                padding: 10px;
+                font-size: 16px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .service-card, .testimonial-card, .form-container {
+                width: 100%;
+                max-width: none;
+            }
+            .services-container, .testimonials-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            form input, form textarea {
+                font-size: 14px;
+            }
+            .map-container iframe {
+                height: 300px;
+            }
+            .cta-button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            .section-title {
+                font-size: 1.6em;
+            }
+            .cta-button {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+            .map-container iframe {
+                height: 250px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -184,7 +243,6 @@
         <section id="about">
             <h2 class="section-title">À propos de RABEL TECH</h2>
             <p>RABEL TECH, fondée par <strong>Mehdi Beloubad</strong>, est spécialisée dans le conseil en ingénierie, la stratégie d'entreprise et la gestion de projets. Nous croyons en l'innovation, la transparence et l'excellence opérationnelle. Nos experts accompagnent les entreprises dans la réussite de leurs projets les plus ambitieux, en proposant des solutions sur-mesure et durables.</p>
-            <p>Notre vision repose sur une approche collaborative, où chaque client devient un partenaire avec qui nous construisons des solutions solides et adaptées à leurs besoins.</p>
         </section>
         <div class="separator"></div>
         <section id="services">
