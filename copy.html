@@ -19,6 +19,7 @@
             color: white;
             padding: 80px 20px;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             position: relative;
         }
         header::after {
@@ -35,7 +36,7 @@
             z-index: 1;
         }
         header h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             font-weight: bold;
         }
         header p {
@@ -44,7 +45,6 @@
         }
         nav {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             background-color: #333;
             position: sticky;
@@ -171,7 +171,7 @@
         /* ✅ Compatibilité mobile améliorée sans modifier le contenu/disposition */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.8em;
+                font-size: 2em;
             }
             header p {
                 font-size: 1em;
@@ -180,15 +180,15 @@
                 flex-direction: column;
             }
             nav a {
-                padding: 12px;
+                padding: 10px;
                 font-size: 16px;
-                text-align: center;
             }
             .container {
                 padding: 20px;
             }
-            .service-card, .testimonial-card, .form-container, .map-container iframe {
+            .service-card, .testimonial-card, .form-container {
                 width: 100%;
+                max-width: none;
             }
             .services-container, .testimonials-container {
                 flex-direction: column;
@@ -201,7 +201,10 @@
                 font-size: 14px;
             }
             .map-container iframe {
-                height: 250px;
+                height: 300px;
+            }
+            .cta-button {
+                width: 100%;
             }
         }
 
@@ -213,14 +216,14 @@
                 font-size: 0.9em;
             }
             .section-title {
-                font-size: 1.5em;
+                font-size: 1.6em;
             }
             .cta-button {
-                width: 100%;
                 font-size: 16px;
+                padding: 12px 25px;
             }
             .map-container iframe {
-                height: 200px;
+                height: 250px;
             }
         }
     </style>
